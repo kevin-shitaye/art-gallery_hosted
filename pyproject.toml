@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "for item in $(cat requirements"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python
 asgiref = "3.5.2"
 astroid = "2.11.7"
 certifi = "2022.6.15"
