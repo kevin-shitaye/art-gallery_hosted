@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='a+s5ro70h)*9ypa&&g%t1swu!2778
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kevin2117.pythonanywhere.com']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
@@ -83,10 +83,13 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgres://r3r3artgallery_user:rPzx8yCCIZvVKJj9fMcWfRVLXWNFzvRq@dpg-ceddi6sgqg45ht9ddnu0-a.oregon-postgres.render.com/r3r3artgallery',
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'kevin2117$default',
+        'USER': 'kevin2117',
+        'PASSWORD': '7Yw_Ly8NW_M8@jF',
+        'HOST': 'kevin2117.mysql.pythonanywhere-services.com',
+    }
 }
 
 
